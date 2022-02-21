@@ -19,3 +19,24 @@ rgb(63, 60, 60) 71%,
    align-items: center; 
    flex-direction: column;
  }
+ a{
+
+    text-decoration: none;
+    cursor: pointer;
+   
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: -webkit-linear-gradient(rgb(224, 129, 20), rgb(212, 14, 14));
+  height:10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar {
+  height:10px;
+  width:10px; 
+   background: #000000; 
+  
+  }
