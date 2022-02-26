@@ -32,6 +32,36 @@ export default function Movie() {
     }
   }, [isbutton]);
 
+
+
+  function saveMovie(){
+    
+    const myList = localStorage.getItem('movies');
+
+    let moviesSave = JSON.parse(myList) || [];
+
+    const hasFilme = moviesSave.some( (mSave) => mSave.id === movie.id )
+    
+    if(hasFilme){
+      alert('Você já possui esse filme salvo.');
+      return;
+ 
+    }
+
+    moviesSave.push(movie);
+    localStorage.setItem('movies', JSON.stringify(moviesSave));
+    alert('Filme salvo com sucesso!');
+
+  }
+
+
+
+
+
+
+
+
+
   if (loading) {
     return (
       <div className="component_movie">
@@ -44,7 +74,7 @@ export default function Movie() {
       <div className=" container_movie">
         <div>
           <div>
-            <h1>{movie.original_title}</h1> <a className="save_movies">❤️ </a>
+            <h1>{movie.original_title}</h1> <a className="save_movies" onClick={saveMovie}>❤️ </a>
           </div>
           <img
             className="image_primary"
