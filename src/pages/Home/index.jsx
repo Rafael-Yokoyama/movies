@@ -24,7 +24,7 @@ export default function Home() {
                 {
                     movies?.map((movie) => {
                         return (
-                            <>
+                          
                                 <div className="container" key={movie.id}>
                                     <div>
                                         <h1>{movie.original_title}</h1>
@@ -45,7 +45,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                            </>
+                          
 
                         )
                     })

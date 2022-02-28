@@ -26,6 +26,7 @@
 h1 {
   margin-top: 40px;
   background: -webkit-linear-gradient(rgb(224, 129, 20), rgb(212, 14, 14));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -38,6 +39,7 @@ p {
   position: absolute;
   width: 100%;
   background: -webkit-linear-gradient(rgb(224, 129, 20), rgb(212, 14, 14));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 5px solid;
@@ -111,5 +113,26 @@ p {
   }
   50% {
     transform: scale(1.025);
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    justify-content: center;
+    margin: 50px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 699px) {
+
+  .image_primary {
+    display: none;
+  }
+  .image_secondary {
+    margin-left: auto;
+    width: 95%;
+    height: 240px;
+  }
+  p {
+    width: 95%;
   }
 }
